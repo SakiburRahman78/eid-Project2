@@ -1,0 +1,175 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Segoe UI,sans-serif;
+}
+
+body{
+    overflow-x:hidden;
+    background:linear-gradient(-45deg,#0f2027,#203a43,#14532d,#2c5364);
+    background-size:400% 400%;
+    animation:bg 10s ease infinite;
+    min-height:100vh;
+    color:white;
+}
+
+@keyframes bg{
+    0%{background-position:0% 50%;}
+    50%{background-position:100% 50%;}
+    100%{background-position:0% 50%;}
+}
+
+.hero{
+    text-align:center;
+    padding:50px 20px;
+}
+
+.hero h1{
+    font-size:60px;
+    text-shadow:0 0 20px gold;
+}
+
+.hero p{
+    margin-top:15px;
+    font-size:25px;
+    color:#ffe082;
+}
+
+.gallery{
+    width:100%;
+    overflow:hidden;
+    padding:70px 0;
+}
+
+.image-box{
+    display:flex;
+    gap:30px;
+    width:max-content;
+    animation:slider 20s linear infinite;
+}
+
+@keyframes slider{
+
+    0%{
+        transform:translateX(100%);
+    }
+
+    100%{
+        transform:translateX(-100%);
+    }
+
+}
+
+.card{
+    min-width:320px;
+    border-radius:20px;
+    overflow:hidden;
+    background:rgba(255,255,255,0.08);
+    backdrop-filter:blur(8px);
+    box-shadow:0 0 20px rgba(255,255,255,0.2);
+    text-decoration:none;
+}
+
+.card img{
+    width:100%;
+    height:260px;
+    object-fit:cover;
+}
+
+.card h2{
+    text-align:center;
+    padding:18px;
+    color:#ffe082;
+    font-size:24px;
+    background:rgba(0,0,0,0.4);
+}
+
+.music{
+    text-align:center;
+    padding:50px 20px;
+}
+
+.music h1{
+    margin-bottom:20px;
+}
+
+footer{
+    text-align:center;
+    padding:25px;
+    background:rgba(0,0,0,0.3);
+}
+
+/* ===== MOBILE RESPONSIVE ===== */
+
+@media(max-width:768px){
+
+    .box,
+    .login-box{
+        width:90%;
+        padding:30px 20px;
+    }
+
+    h1,
+    .hero h1{
+        font-size:38px;
+    }
+
+    p,
+    .hero p{
+        font-size:18px;
+        line-height:30px;
+    }
+
+    button{
+        width:100%;
+        font-size:18px;
+    }
+
+    .image-box{
+        gap:20px;
+    }
+
+    .card{
+        min-width:260px;
+    }
+
+    .card img{
+        height:220px;
+    }
+
+    .card h2{
+        font-size:20px;
+    }
+
+    audio{
+        width:90%;
+    }
+
+}
+
+@media(max-width:480px){
+
+    h1,
+    .hero h1{
+        font-size:30px;
+    }
+
+    p,
+    .hero p{
+        font-size:16px;
+    }
+
+    .card{
+        min-width:220px;
+    }
+
+    .card img{
+        height:190px;
+    }
+
+    .card h2{
+        font-size:18px;
+    }
+
+}

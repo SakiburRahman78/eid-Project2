@@ -1,0 +1,163 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Segoe UI,sans-serif;
+}
+
+body{
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    overflow:hidden;
+    background:linear-gradient(-45deg,#0f2027,#14532d,#203a43,#2c5364);
+    background-size:400% 400%;
+    animation:bg 10s ease infinite;
+}
+
+@keyframes bg{
+    0%{background-position:0% 50%;}
+    50%{background-position:100% 50%;}
+    100%{background-position:0% 50%;}
+}
+
+.box{
+    width:420px;
+    padding:45px;
+    text-align:center;
+    border-radius:25px;
+    background:rgba(255,255,255,0.08);
+    backdrop-filter:blur(10px);
+    box-shadow:0 0 25px rgba(255,255,255,0.2);
+}
+
+h1{
+    color:white;
+    font-size:45px;
+    text-shadow:0 0 15px gold;
+    margin-bottom:20px;
+}
+
+p{
+    color:#ffe082;
+    font-size:22px;
+    line-height:35px;
+    margin-bottom:35px;
+}
+
+a{
+    text-decoration:none;
+}
+
+button{
+    padding:16px 40px;
+    border:none;
+    border-radius:15px;
+    font-size:20px;
+    font-weight:bold;
+    cursor:pointer;
+    color:black;
+    background:linear-gradient(45deg,#ffd700,#ff9800);
+    transition:.4s;
+}
+
+button:hover{
+    transform:scale(1.08);
+    box-shadow:0 0 25px gold;
+}
+
+/* ===== MOBILE RESPONSIVE ===== */
+
+@media(max-width:768px){
+
+    .box,
+    .login-box{
+        width:90%;
+        padding:30px 20px;
+    }
+
+    h1,
+    .hero h1{
+        font-size:38px;
+    }
+
+    p,
+    .hero p{
+        font-size:18px;
+        line-height:30px;
+    }
+
+    button{
+        width:100%;
+        font-size:18px;
+    }
+
+    .image-box{
+        gap:20px;
+    }
+
+    .card{
+        min-width:260px;
+    }
+
+    .card img{
+        height:220px;
+    }
+
+    .card h2{
+        font-size:20px;
+    }
+
+    audio{
+        width:90%;
+    }
+
+}
+
+@media(max-width:480px){
+
+    h1,
+    .hero h1{
+        font-size:30px;
+    }
+
+    p,
+    .hero p{
+        font-size:16px;
+    }
+
+    .card{
+        min-width:220px;
+    }
+
+    .card img{
+        height:190px;
+    }
+
+    .card h2{
+        font-size:18px;
+    }
+
+}
+/* MESSAGE */
+
+#message{
+    display:none;
+    margin-top:30px;
+    font-size:28px;
+    color:white;
+    animation:show 1s ease;
+    text-shadow:0 0 15px gold;
+}
+
+@keyframes show{
+    from{
+        opacity:0;
+        transform:translateY(20px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
