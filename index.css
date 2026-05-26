@@ -161,3 +161,81 @@ button:hover{
         transform:translateY(0);
     }
 }
+/* MOON */
+
+.moon{
+    position:absolute;
+    top:70px;
+    right:100px;
+    width:140px;
+    height:140px;
+    border-radius:50%;
+    background:#fff8c5;
+    box-shadow:0 0 40px #fff8c5;
+}
+
+.moon::before{
+    content:'';
+    position:absolute;
+    width:130px;
+    height:130px;
+    background:#203a43;
+    border-radius:50%;
+    top:5px;
+    left:40px;
+}
+
+/* STARS */
+
+.star{
+    position:absolute;
+    width:4px;
+    height:4px;
+    background:white;
+    border-radius:50%;
+    animation:blink 2s infinite alternate;
+}
+
+@keyframes blink{
+    from{
+        opacity:.3;
+        transform:scale(.8);
+    }
+    to{
+        opacity:1;
+        transform:scale(1.7);
+    }
+}
+
+/* FLOATING LANTERN */
+
+.lantern{
+    position:absolute;
+    width:60px;
+    animation:move 10s linear infinite;
+}
+
+.l1{
+    left:10%;
+    animation-delay:0s;
+}
+
+.l2{
+    left:50%;
+    animation-delay:3s;
+}
+
+.l3{
+    left:85%;
+    animation-delay:6s;
+}
+
+@keyframes move{
+    0%{
+        transform:translateY(-150px) rotate(0deg);
+    }
+    100%{
+        transform:translateY(120vh) rotate(360deg);
+    }
+}
+
